@@ -1,0 +1,22 @@
+{
+    "name": "Youtube utilities",
+    "description": "Skips youtube Ads and show dislike counts",
+    "version" : "1.0",
+    "manifest_version":3,
+    "permissions":[
+        "activeTab",
+        "storage"
+    ],
+    "action":{
+        "default_popup":"popup.html"
+    },
+    "content_scripts":[
+        {
+          "matches": [
+            "*://*.youtube.com/*",
+            "*://youtube.com/*"
+          ],
+          "js": ["content.js"]
+        }
+      ]
+}
