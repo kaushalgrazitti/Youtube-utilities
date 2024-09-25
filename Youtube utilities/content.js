@@ -23,7 +23,12 @@ function skip(e) {
 
             skipBtnList.forEach(e => e.click());
             
-        else video.currentTime = video.duration;
+        if(video){
+            try{
+                video.currentTime = video.duration;
+            }
+            catch(e){}
+        }
 
     }
 }
